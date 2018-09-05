@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>sk</title>
+        <link rel="stylesheet" href="main.css">
+        
+    </head>
+	
+	<body>
+	<div id="wrapper">
+	<form class="form" name="form">
+		<input class="textview" name="textview">
+		</form>
+	<table>
+	<tr>
+	<td><input class="button" type="button" value="7" onclick="adds(7)"></td>
+	<td><input class="button" type="button" value="8" onclick="adds(8)"></td>
+	<td><input class="button" type="button" value="9" onclick="adds(9)"></td>
+	<td><input class="button" type="button" value="/" onclick="adds('/')"></td>
+	</tr>	
+		
+	<tr>
+	<td><input class="button" type="button" value="4" onclick="adds(4)"></td>
+	<td><input class="button" type="button" value="5" onclick="adds(5)"></td>
+	<td><input class="button" type="button" value="6" onclick="adds(6)"></td>
+	<td><input class="button" type="button" value="X" onclick="adds('*')"></td>
+	</tr>
+
+	<tr>
+	<td><input class="button" type="button" value="1" onclick="adds(1)"></td>
+	<td><input class="button" type="button" value="2" onclick="adds(2)"></td>
+	<td><input class="button" type="button" value="3" onclick="adds(3)"></td>
+	<td><input class="button" type="button" value="-" onclick="adds('-')"></td>
+	</tr>
+		
+	<tr>
+	<td><input class="button" type="button" value="0" onclick="adds(0)"></td>
+	<td><input class="button" type="button" value="." onclick="adds('.')"></td>
+	<td><input class="button" type="button" value="C" onclick='clear()'></td>
+	<td><input class="button" type="button" value="=" onclick='equal()'></td>
+	
+	</tr>
+		
+	</table>
+	</div>
+	
+	</body>
+	<script>
+	function adds(x) {
+		document.form.textview.value=document.form.textview.value + x;
+	};
+	function equal() {
+		var exp = document.form.textview.value;
+		if(exp) {
+			document.form.textview.value=eval(exp);
+		}
+	}
+	function clear() {
+		document.form.textview.value = "";
+	}
+	
+	</script>
+	
+</html>
